@@ -5,6 +5,9 @@ function inputNumber(num){
      }
    }
 
+function Reload(){
+    location.reload();
+}
 function Calculate(){   
     var n = document.getElementById("ninput").value;
     var x = document.getElementById("xinput").value;
@@ -69,9 +72,11 @@ function Calculate(){
     }
 
     //Output
-    let sin = "Sinh(" + x + ")";
+    let sin = "Sinh(" + x + ") = ";
     let sins = sin.bold();
-    document.getElementById("output").innerHTML = sins + " = " + sum;
+    let p = "Pn(" + x + ") = ";
+    document.getElementById("output").innerHTML = sins + math.sinh(x);
+    document.getElementById("outputp").innerHTML = p + sum;
     document.getElementById("outputWithDec").innerHTML = decimal + " decimal places";
 
     //Rounding
